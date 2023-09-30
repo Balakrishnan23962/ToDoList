@@ -13,9 +13,9 @@ struct DataListView: View {
         HStack {
             VStack(alignment: .leading) {
                 if item.isImportant {
-                    Image(systemName: "exclamationmark.3")
+                    Image(systemName: "exclamationmark.circle")
                         .symbolVariant(.fill)
-                        .foregroundStyle(.red)
+                        .foregroundStyle(.green)
                         .font(.largeTitle)
                         .bold()
                 }
