@@ -26,7 +26,7 @@ struct DataListView: View {
             Spacer()
             Button(action: {
                 withAnimation {
-                    item.isFinished.toggle()
+                        item.isFinished = true
                 }
             }, label: {
                 Image(systemName: "checkmark")

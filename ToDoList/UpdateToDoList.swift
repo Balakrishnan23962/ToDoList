@@ -20,7 +20,7 @@ struct UpdateToDoList: View {
                     dismiss()
                 }
             }
-            .navigationTitle("Update ToDo")
+            .navigationTitle("Update ToDoList")
         }
     }
 }

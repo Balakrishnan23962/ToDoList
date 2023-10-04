@@ -9,9 +9,12 @@ import SwiftUI
 import SwiftData
 struct ContentView: View {
     @State var isShow = false
-    @Query(
-        sort: \DataModel.time
-    ) private var items: [DataModel]
+    @Query(filter: #Predicate<DataModel> {
+        $0.isFinished == false
+    }, sort: \DataModel.time) var items: [DataModel]
+//    @Query(
+//        sort: \DataModel.time
+//    ) private var items: [DataModel]
     @State var updateModel: DataModel?
     @Environment(\.modelContext) var context
     var body: some View {
